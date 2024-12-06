@@ -8,7 +8,7 @@ body {
     align-items: center;
     flex-direction: column;
     opacity: 0;
-    animation: fadeIn 1.5s forwards;
+    animation: fadeIn 1.2s forwards;
 }
 
 @keyframes fadeIn {
@@ -22,10 +22,10 @@ body {
 
 @keyframes fadeOut {
     0% {
-        opacity: 0;
+        opacity: 1;
     }
     100% {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -205,16 +205,16 @@ section .color:nth-child(3) {
 
 @font-face {
     font-family: '华文行楷';
-    src: url('font/STXINGKA.TTF');
+    src: url('../font/STXINGKA.TTF');
 }
 
 @font-face {
     font-family: '优设标题黑';
-    src: url('font/优设标题黑.ttf');
+    src: url('../font/优设标题黑.ttf');
 }
 
 @font-face {
     font-family: '楷体';
-    src: url('font/simkai.ttf');
+    src: url('../font/simkai.ttf');
 }
 
