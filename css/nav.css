@@ -1,0 +1,39 @@
+#nav {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 10em;
+    display: flex;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 20px 40px 40px #00000033;
+    padding: 10px;
+    width: auto;
+    transition: top 0.3s ease;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#nav.show {
+    top: 15px;
+}
+
+#nav.hide {
+    top: -140px;
+}
+
+#nav li a {
+    position: relative;
+    padding: 12px 50px;
+    font: 500 26px '优设标题黑';
+    border: none;
+    outline: none;
+    color: rgb(70, 100, 180);
+    display: inline-block;
+    text-decoration: none;
+    z-index: 3;
+}

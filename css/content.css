@@ -1,0 +1,82 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: 楷体, KaiTi, serif;
+    line-height: 1.6;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-radius: 15px;
+
+}
+
+.text::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 15px;
+
+}
+
+.text::before {
+    top: -2px;
+    left: -2px;
+}
+
+.text::after {
+    bottom: -2px;
+    right: -2px;
+}
+
+.label {
+    text-align: justify;
+    font-family: 楷体, KaiTi, serif;
+    line-height: 1.6;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.text p:hover {
+    animation: floatUpDown 3s infinite ease-in-out;
+    color: #F5F4FE !important;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

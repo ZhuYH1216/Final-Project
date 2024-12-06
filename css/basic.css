@@ -1,0 +1,220 @@
+body {
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    pointer-events: none;
+}
+
+section .color {
+    position: fixed;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+}
+
+section .color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+}
+
+section .color:nth-child(3) {
+    bottom: 50px;
+    right: 100px;
+    width: 500px;
+    height: 500px;
+    background: #00d2ff;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+section .color {
+    position: fixed;
+    filter: blur(150px);
+    z-index: -1;
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+    position: fixed;
+    animation: rotateAroundCenter1 10s linear infinite;
+    transform-origin: center;
+}
+
+section .color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+    position: fixed;
+    animation: rotateAroundCenter2 12s linear infinite;
+    transform-origin: center;
+}
+
+section .color:nth-child(3) {
+    bottom: 50px;
+    right: 100px;
+    width: 500px;
+    height: 500px;
+    background: #00d2ff;
+    position: fixed;
+    animation: rotateAroundCenter3 14s linear infinite;
+    transform-origin: center;
+}
+
+/* 第一块颜色的动画，围绕屏幕中心逆时针旋转 */
+@keyframes rotateAroundCenter1 {
+    0% {
+        left: 50%;
+        top: -350px;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        left: 80%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    50% {
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75% {
+        left: 20%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+    100% {
+        left: 50%;
+        top: -350px;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* 第二块颜色的动画，围绕屏幕中心逆时针旋转 */
+@keyframes rotateAroundCenter2 {
+    0% {
+        left: 100px;
+        top: -150px;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        left: 300px;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    50% {
+        left: 100px;
+        top: 250px;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75% {
+        left: -100px;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+    100% {
+        left: 100px;
+        top: -150px;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* 第三块颜色的动画，围绕屏幕中心逆时针旋转 */
+@keyframes rotateAroundCenter3 {
+    0% {
+        left: 50%;
+        top: 50px;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        left: 20%;
+        top: 200px;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    50% {
+        left: 50%;
+        top: 400px;
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    75% {
+        left: 80%;
+        top: 200px;
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+    100% {
+        left: 50%;
+        top: 50px;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: '华文行楷';
+    src: url('font/STXINGKA.TTF');
+}
+
+@font-face {
+    font-family: '优设标题黑';
+    src: url('font/优设标题黑.ttf');
+}
+
+@font-face {
+    font-family: '楷体';
+    src: url('font/simkai.ttf');
+}
+
